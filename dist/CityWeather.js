@@ -14,8 +14,12 @@ class CityWeather{
     
     
     async getCityData(cityName){
-        let newCity = await $.get(`/city/${cityName}`) 
-        this.cityData.push(newCity)   
+        let newCity = await $.get(`/city/${cityName}`)
+        if(newCity.name !== undefined){ 
+            this.cityData.push(newCity)  
+        }else{
+            alert("City not found!")
+        } 
     }
     
     

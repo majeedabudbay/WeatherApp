@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const City = require('../model/City')
+const City = require('../models/City')
 let urllib = require('urllib')
 const path = require('path')
 
@@ -16,7 +16,7 @@ router.get('/sanity', function(req, res){
 
 router.get('/city/:cityName', function(req, res){
     urllib.request(`http://api.openweathermap.org/data/2.5/weather?q=${req.params.cityName}
-    &units=metric&APPID=94940697044b8294948f4db0e248ed08`, function (err, data, respnse){
+    &units=metric&APPID=94940697044b8294948f4db0e248ed08`, function (err, data, response){
         const city = JSON.parse(data)
         if(city.cod !== 200){
             res.end()

@@ -10,55 +10,55 @@ body {
     color: white;
 }
 
-#cities {
-    display: grid;
-     grid-template-columns: auto;
-    grid-template-areas: "z"; 
-    grid-gap: 10px; 
-    
-}
+
 
 .cityDiv {
-    grid-area: "z";
-    display: inline-grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: grid;
     grid-template-areas: 
-    "stp"
-    "dnc";  
+    "s t p" 
+    "d n c";   
+
+    
+    grid-template-columns: 50px 100px;
+    align-items: center;
     
 }
 .cityName {
     
-    grid-area: "n";
+    grid-area: n;
     
 }
 
 
 .cityTemp {
     
-    grid-area: "t";
+    grid-area: t;
 }
 
 
 .cityCon {
 
-    grid-area: "c";
+    grid-area: c;
 }
 
 .cityConImg {
 
-    grid-area: "p";
+    grid-area: p;
 }
 
 
 .saveBtn {
 
-    grid-area: "s";
+    grid-area: s;
     width: fit-content;
 }
 
 .deleteBtn {
 
-    grid-area: "d";
+    grid-area: d;
     width: fit-content;
+}
+
+::placeholder {
+    font-family: 'Atma';
 }

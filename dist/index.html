@@ -16,18 +16,26 @@
         {{#each city}}
           <div class="cityDiv">
 
+            <button class="saveBtn"><i class="fas fa-save"></i></button>
+
             <span class="cityName">{{name}}</span>
+            
+            <img class="cityConImg" src={{conditionPic}} alt="">
+
+
+            <button class="deleteBtn"><i class="fa fa-trash"></i></button>
+
             
             <span class="cityTemp">{{temperature}} &#8451;</span>
             
             <span class="cityCon">{{condition}}</span>
             
-            <img class="cityConImg" src={{conditionPic}} alt="">
             
             
             
-            <button class="saveBtn"><i class="fas fa-save"></i></button>
-            <button class="deleteBtn"><i class="fa fa-trash"></i></button>
+            
+            
+            
 
             </div>
             {{/each}}
@@ -35,19 +43,14 @@
 
      
     
-    <input id="input" type="text" placeholder="City"><button id="searchBtn"><i class="fas fa-search"></i></button><br>
+    <input id="input" type="text" placeholder="City"><button id="searchBtn"><i class="fas fa-search"></i></button>
     <div id="cities"></div>
 
 
-    <!-- <script src='jquery/dist/jquery.js'></script>
-    <script src='handlebars/dist/handlebars.js'></script> -->
+    <script src='jquery/dist/jquery.js'></script>
+    <script src='handlebars/dist/handlebars.js'></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-
-    <script
-  src="https://code.jquery.com/jquery-3.5.0.js"
-  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-  crossorigin="anonymous"></script>
+    
     <script src="Renderer.js"></script>
     <script src="CityWeather.js"></script>
     <script src="main.js"></script>

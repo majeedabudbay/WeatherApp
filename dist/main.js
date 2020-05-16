@@ -34,7 +34,14 @@ $("#cities").on("click", ".saveBtn", function(){
 
 $("#cities").on("click", ".deleteBtn",function(){
 
-    cityWeather.removeCity($(this).closest(".cityDiv").find(".cityName").text())
-    loadPage()
+    const cityName = $(this).closest(".cityDiv").find(".cityName").text()
+    cityWeather.removeCity(cityName)
+    for(let city in cityWeather.cityData){
+        if(cityWeather.cityData[city].name == cityName){
+            cityWeather.cityData.splice(city, 1)
+        }
+    }
+    
+    renderer.renderData(cityWeather.cityData)
     
 })

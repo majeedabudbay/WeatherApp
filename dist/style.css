@@ -1,0 +1,64 @@
+body {
+    background-image: url("clouds.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    font-family: 'Atma';
+    font-size: 22px;
+    color: white;
+}
+
+#cities {
+    display: grid;
+     grid-template-columns: auto;
+    grid-template-areas: "z"; 
+    grid-gap: 10px; 
+    
+}
+
+.cityDiv {
+    grid-area: "z";
+    display: inline-grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "stp"
+    "dnc";  
+    
+}
+.cityName {
+    
+    grid-area: "n";
+    
+}
+
+
+.cityTemp {
+    
+    grid-area: "t";
+}
+
+
+.cityCon {
+
+    grid-area: "c";
+}
+
+.cityConImg {
+
+    grid-area: "p";
+}
+
+
+.saveBtn {
+
+    grid-area: "s";
+    width: fit-content;
+}
+
+.deleteBtn {
+
+    grid-area: "d";
+    width: fit-content;
+}

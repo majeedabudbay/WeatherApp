@@ -1,0 +1,64 @@
+body {
+    background-image: url("clouds.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    font-family: 'Atma';
+    font-size: 22px;
+    color: white;
+}
+
+
+
+.cityDiv {
+    display: grid;
+    grid-template-areas: 
+    "s t p" 
+    "d n c";   
+
+    
+    grid-template-columns: 50px 100px;
+    align-items: center;
+    
+}
+.cityName {
+    
+    grid-area: n;
+    
+}
+
+
+.cityTemp {
+    
+    grid-area: t;
+}
+
+
+.cityCon {
+
+    grid-area: c;
+}
+
+.cityConImg {
+
+    grid-area: p;
+}
+
+
+.saveBtn {
+
+    grid-area: s;
+    width: fit-content;
+}
+
+.deleteBtn {
+
+    grid-area: d;
+    width: fit-content;
+}
+
+::placeholder {
+    font-family: 'Atma';
+}
